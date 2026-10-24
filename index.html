@@ -1,33 +1,647 @@
-<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HSK 4 · 2.0</title><style>
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@400;600;700&display=swap');
-:root{--paper:#f5ebd7;--ivory:#fff9ed;--jade:#356b60;--deep:#244d45;--cinnabar:#a63d32;--gold:#b79555;--ink:#302c28}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:'Noto Sans SC','Segoe UI',sans-serif;background:radial-gradient(ellipse at 85% 8%,#c9d8c5 0%,transparent 31%),radial-gradient(ellipse at 12% 35%,#e9dfc7 0%,transparent 42%),var(--paper);min-height:100vh;overflow-x:hidden}body:before{content:'';position:fixed;inset:0;pointer-events:none;opacity:.22;background-image:repeating-linear-gradient(0deg,transparent 0 5px,#ab9b7e10 6px 7px);z-index:0}.scene{position:absolute;inset:0;overflow:hidden;pointer-events:none;perspective:850px}.mountain{position:absolute;bottom:-60px;width:85%;height:200px;left:20%;border-radius:50% 50% 0 0;background:linear-gradient(0deg,#52796a66,transparent);filter:blur(24px);transform:rotate(-8deg)}.mountain.two{left:-20%;bottom:-110px;height:260px;background:linear-gradient(0deg,#8a9c8666,transparent);transform:rotate(10deg)}.sun{position:absolute;right:11%;top:15%;width:135px;height:135px;border-radius:50%;background:#bd8c5b55;box-shadow:0 0 85px #d7aa6b55}.seal{position:absolute;right:7%;top:15%;font-family:'Noto Serif SC',serif;color:#9a4437aa;border:2px solid #9a443799;padding:9px;font-size:17px;writing-mode:vertical-rl;letter-spacing:3px;transform:rotate(8deg)}main{position:relative;max-width:1480px;margin:auto;padding:30px 35px 70px;z-index:1}.hero{position:relative;isolation:isolate;overflow:hidden;min-height:300px;padding:54px 65px;border:1px solid #bba879;border-radius:8px;background:linear-gradient(110deg,#fff9edee,#f5ebd7dd 65%,#e3e7d9b3);box-shadow:0 22px 60px #3c46372b, inset 0 0 0 7px #fff9ed9c;transform-style:preserve-3d}.hero:after{content:'';position:absolute;inset:13px;border:1px solid #b7955566;pointer-events:none}.hero small{font-size:15px;letter-spacing:4px;color:var(--cinnabar);font-weight:800}.hero h1{font-family:'Noto Serif SC',serif;font-size:clamp(50px,7vw,94px);line-height:1.15;letter-spacing:5px;margin:14px 0;color:var(--deep);text-shadow:2px 4px 0 #c2d0bb,5px 9px 16px #42594a40;transform:translateZ(35px)}.hero h1 span{color:var(--gold)}.hero p{font-size:19px;margin:0;color:#5c584b;letter-spacing:1px}.hero .ornament{position:absolute;right:12%;top:15%;font:800 160px 'Noto Serif SC',serif;color:#356b6017;transform:rotate(-12deg);user-select:none}.toolbar{display:flex;justify-content:space-between;gap:15px;align-items:center;margin:36px 0 24px;flex-wrap:wrap}.toolbar strong{font:700 25px 'Noto Serif SC',serif;color:var(--deep);letter-spacing:2px}.toolbar strong:before{content:'◆';font-size:14px;color:var(--gold);margin-right:12px}input{font:inherit;padding:14px 18px;border:1px solid #c9b88f;border-radius:6px;min-width:250px;background:#fffaf0;color:var(--ink);outline-color:var(--jade)}button{font:inherit;cursor:pointer}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;perspective:1200px}.card{position:relative;overflow:hidden;background:linear-gradient(155deg,#fffdf6,#f6ecd9);border:1px solid #c8b58e;border-radius:8px;padding:25px 23px 23px;box-shadow:0 7px 0 #c9bb9c,0 16px 25px #3b4e3b20;transform-style:preserve-3d;transition:transform .32s ease,box-shadow .32s ease}.card:before{content:'';position:absolute;inset:8px;border:1px solid #b7955540;pointer-events:none}.card:after{content:'卷';position:absolute;right:20px;top:11px;font:800 62px 'Noto Serif SC',serif;color:#356b6010;pointer-events:none}.card:hover{transform:translateY(-10px) rotateX(3deg) rotateY(-2deg);box-shadow:0 12px 0 #b7a880,0 26px 38px #344b3b33}.num{font-size:12px;letter-spacing:2px;color:var(--cinnabar);font-weight:800}.card h2{font:800 34px 'Noto Serif SC',serif;margin:12px 0 2px;color:var(--deep)}.sub{font:600 17px 'Noto Serif SC',serif;color:#857552;margin-bottom:22px}.ppt,.practice button{width:100%;border-radius:5px;padding:14px 8px;font-weight:700;transition:background .2s,transform .2s}.ppt{background:var(--jade);color:#fffaf0;border:1px solid var(--deep);font-size:17px;margin-bottom:12px;box-shadow:0 4px 0 #244d45}.ppt:hover{background:var(--deep);transform:translateY(-2px)}.practice{display:grid;grid-template-columns:1fr 1fr;gap:10px}.practice button{background:#f8f0df;color:var(--deep);border:1px solid #c5b58e;font-size:14px}.practice button:hover{background:#e2e9da;transform:translateY(-2px)}.note{text-align:center;color:#6f705e;margin:38px 0;font-size:14px}.modal{position:fixed;inset:0;background:#1b302bc4;display:none;align-items:center;justify-content:center;padding:20px;z-index:10;backdrop-filter:blur(5px)}.modal.on{display:flex}.dialog{background:var(--ivory);border:2px solid var(--gold);border-radius:8px;box-shadow:0 22px 80px #0005;padding:34px;max-width:530px;width:100%}.dialog h2{margin-top:0;color:var(--jade);font-family:'Noto Serif SC',serif}.dialog input{width:100%;margin:12px 0}.actions{display:flex;justify-content:flex-end;gap:10px}.actions button{border:1px solid #b9aa8a;border-radius:5px;padding:12px 18px}.save{background:var(--jade);color:white}.cancel{background:#f3ead6;color:var(--ink)}@media(max-width:1150px){.grid{grid-template-columns:repeat(3,1fr)}}@media(max-width:780px){.grid{grid-template-columns:repeat(2,1fr)}.hero{padding:35px;min-height:240px}.hero .ornament{font-size:100px}}@media(max-width:530px){.grid{grid-template-columns:1fr}main{padding:14px}.toolbar input{width:100%}.hero{padding:34px 26px}.hero h1{letter-spacing:0}.seal{display:none}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;animation:none!important}}
-.ppt,.practice a{display:block;text-align:center;text-decoration:none}.practice a{width:100%;border-radius:5px;padding:14px 8px;font-weight:700;transition:background .2s,transform .2s;background:#f8f0df;color:var(--deep);border:1px solid #c5b58e;font-size:14px}.practice a:hover{background:#e2e9da;transform:translateY(-2px)}.ppt:focus-visible,.practice a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+<!doctype html>
+<html lang="vi">
 
-.login-layer{position:fixed;inset:0;z-index:100;background:linear-gradient(140deg,#203e36e8,#182c27ed);display:grid;place-items:center;padding:18px;overflow:auto}.login-layer[hidden]{display:none}.login-box{background:var(--ivory);border:2px solid var(--gold);box-shadow:0 25px 90px #0008;border-radius:15px;max-width:510px;width:100%;padding:clamp(24px,5vw,44px);position:relative}.login-box:before{content:'卷';position:absolute;right:25px;top:9px;color:#b7955530;font:100px 'Noto Serif SC',serif;pointer-events:none}.login-box h2{font:700 clamp(29px,5vw,39px) 'Noto Serif SC',serif;color:var(--deep);margin:0 0 8px}.login-box p{color:#6c6b5e;line-height:1.7}.login-box label{display:block;margin:17px 0 5px;font-weight:700;color:var(--deep)}.login-box input{width:100%;border:1px solid #c6b996;background:#fffdf6;border-radius:7px;padding:14px;font:inherit;color:var(--ink)}.login-box button,.userbar button{background:var(--jade);color:white;border:0;border-radius:7px;padding:13px 22px;font:inherit;font-weight:700;cursor:pointer}.login-box button{width:100%;margin-top:20px}.login-box button:disabled{opacity:.6;cursor:wait}.login-error{min-height:1.4em;color:#9d413a;font-size:14px}.userbar{display:flex;justify-content:flex-end;align-items:center;gap:14px;margin:12px 0;color:var(--deep);flex-wrap:wrap}.userbar button{padding:8px 14px}.login-note{font-size:13px}
-</style></head><body><div class="login-layer" id="loginLayer"><form class="login-box" id="loginForm"><h2>入学登记 · Vào lớp học</h2><p>HSK 4 · 2.0 — Điền thông tin để bắt đầu học.</p><label for="studentName">Họ và tên học sinh</label><input id="studentName" required maxlength="100" autocomplete="name" placeholder="Nguyễn Văn A"><label for="studentClass">Lớp</label><input id="studentClass" required maxlength="60" placeholder="HSK4 - Lớp 1"><label for="studentEmail">Email (không bắt buộc)</label><input id="studentEmail" type="email" maxlength="160" autocomplete="email" placeholder="hocvien@example.com"><button id="loginButton" type="submit">进入课堂 · Vào học</button><p class="login-error" id="loginError" role="status"></p><p class="login-note">Không yêu cầu mật khẩu. Đây là biểu mẫu ghi danh, không phải hệ thống xác thực tài khoản. Chỉ gửi thông báo nếu giáo viên đã cấu hình dịch vụ email.</p></form></div><main><div class="userbar" id="userbar" hidden><span id="welcome"></span><button id="logout" type="button">Đổi học sinh</button></div><header class="hero"><div class="scene"><div class="sun"></div><div class="mountain"></div><div class="mountain two"></div><div class="seal">学而时习之</div></div><div class="ornament">書</div><small>中文学习 · HSK 4 STANDARD COURSE</small><h1>HSK 4 <span>2.0</span></h1><p>二十课 · Bài giảng PPT · Bốn phần luyện tập</p></header><div class="toolbar"><strong>课程目录 · 20 bài học</strong><input id="search" placeholder="Tìm bài học..." aria-label="Tìm bài học"></div><section id="grid" class="grid"></section><p class="note">Chọn PPT hoặc Luyện tập 1–4 để chuyển đến trang HTML tương ứng. Hãy tải các file bài học lên GitHub Pages theo đúng thư mục.</p></main><script>
-// Cấu hình: tạo form tại https://formspree.io/ và đặt email nhận thông báo là dungtran92qc@gmail.com.
-// Sau khi xác minh email, thay chuỗi bên dưới bằng endpoint của form, ví dụ https://formspree.io/f/xxxxxxxx.
-const NOTIFY_ENDPOINT = '';
-const loginLayer=document.getElementById('loginLayer');
-const userbar=document.getElementById('userbar');
-function showUser(data){loginLayer.hidden=true;userbar.hidden=false;document.getElementById('welcome').textContent='欢迎，'+data.name+' · '+data.className;}
-const previous=sessionStorage.getItem('hsk4_student');if(previous){try{showUser(JSON.parse(previous))}catch(e){sessionStorage.removeItem('hsk4_student')}}
-document.getElementById('logout').addEventListener('click',()=>{sessionStorage.removeItem('hsk4_student');userbar.hidden=true;loginLayer.hidden=false;});
-document.getElementById('loginForm').addEventListener('submit',async e=>{
- e.preventDefault();const btn=document.getElementById('loginButton'),status=document.getElementById('loginError');
- const data={name:document.getElementById('studentName').value.trim(),className:document.getElementById('studentClass').value.trim(),email:document.getElementById('studentEmail').value.trim()};
- if(!data.name||!data.className)return;
- btn.disabled=true;status.textContent='';
- if(NOTIFY_ENDPOINT){try{const response=await fetch(NOTIFY_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name:data.name,class:data.className,email:data.email||'Không cung cấp',time:new Date().toLocaleString('vi-VN'),_subject:'HSK4 2.0 - Học sinh vào lớp'})});if(!response.ok)throw Error('Gửi thông báo chưa thành công');}catch(err){status.textContent='Chưa gửi được email thông báo. Vui lòng thử lại hoặc báo giáo viên.';btn.disabled=false;return;}}
- else{status.textContent='Chưa cấu hình email: chế độ xem thử, không gửi thông báo.';}
- sessionStorage.setItem('hsk4_student',JSON.stringify(data));
- if(!NOTIFY_ENDPOINT){setTimeout(()=>showUser(data),900)}else showUser(data);
- btn.disabled=false;
-});
-const names=['一','二','三','四','五','六','七','八','九','十','十一','十二','十三','十四','十五','十六','十七','十八','十九','二十'];
-const grid=document.getElementById('grid');
-function lessonPath(n,t){const folder='bai-'+String(n).padStart(2,'0');return folder+'/'+(t==='ppt'?'ppt.html':'luyen-tap-'+t+'.html')}
-function render(){grid.innerHTML='';const q=document.getElementById('search').value.trim().toLowerCase();for(let n=1;n<=20;n++){if(q&&!('bài '+n+' lesson '+n+' 第'+names[n-1]+'课').includes(q))continue;const c=document.createElement('article');c.className='card';c.innerHTML=`<div class="num">LESSON ${String(n).padStart(2,'0')}</div><h2>Bài ${n}</h2><div class="sub">第${names[n-1]}课</div><a class="ppt" href="${lessonPath(n,'ppt')}">Bài giảng PPT</a><div class="practice">${[1,2,3,4].map(i=>`<a href="${lessonPath(n,i)}">Luyện tập ${i}</a>`).join('')}</div>`;grid.appendChild(c)}}
-document.getElementById('search').oninput=render;render();
-const hero=document.querySelector('.hero');if(window.matchMedia('(pointer:fine) and (prefers-reduced-motion:no-preference)').matches){hero.addEventListener('pointermove',e=>{let r=hero.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;hero.style.transform=`rotateY(${x*3}deg) rotateX(${-y*2}deg)`});hero.addEventListener('pointerleave',()=>hero.style.transform='');}
-</script></body></html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>HSK 4 · 2.0</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@400;600;700&display=swap');
+
+        :root {
+            --paper: #f5ebd7;
+            --ivory: #fff9ed;
+            --jade: #356b60;
+            --deep: #244d45;
+            --cinnabar: #a63d32;
+            --gold: #b79555;
+            --ink: #302c28
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            color: var(--ink);
+            font-family: 'Noto Sans SC', 'Segoe UI', sans-serif;
+            background: radial-gradient(ellipse at 85% 8%, #c9d8c5 0%, transparent 31%), radial-gradient(ellipse at 12% 35%, #e9dfc7 0%, transparent 42%), var(--paper);
+            min-height: 100vh;
+            overflow-x: hidden
+        }
+
+        body:before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            opacity: .22;
+            background-image: repeating-linear-gradient(0deg, transparent 0 5px, #ab9b7e10 6px 7px);
+            z-index: 0
+        }
+
+        .scene {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+            perspective: 850px
+        }
+
+        .mountain {
+            position: absolute;
+            bottom: -60px;
+            width: 85%;
+            height: 200px;
+            left: 20%;
+            border-radius: 50% 50% 0 0;
+            background: linear-gradient(0deg, #52796a66, transparent);
+            filter: blur(24px);
+            transform: rotate(-8deg)
+        }
+
+        .mountain.two {
+            left: -20%;
+            bottom: -110px;
+            height: 260px;
+            background: linear-gradient(0deg, #8a9c8666, transparent);
+            transform: rotate(10deg)
+        }
+
+        .sun {
+            position: absolute;
+            right: 11%;
+            top: 15%;
+            width: 135px;
+            height: 135px;
+            border-radius: 50%;
+            background: #bd8c5b55;
+            box-shadow: 0 0 85px #d7aa6b55
+        }
+
+        .seal {
+            position: absolute;
+            right: 7%;
+            top: 15%;
+            font-family: 'Noto Serif SC', serif;
+            color: #9a4437aa;
+            border: 2px solid #9a443799;
+            padding: 9px;
+            font-size: 17px;
+            writing-mode: vertical-rl;
+            letter-spacing: 3px;
+            transform: rotate(8deg)
+        }
+
+        main {
+            position: relative;
+            max-width: 1480px;
+            margin: auto;
+            padding: 30px 35px 70px;
+            z-index: 1
+        }
+
+        .hero {
+            position: relative;
+            isolation: isolate;
+            overflow: hidden;
+            min-height: 300px;
+            padding: 54px 65px;
+            border: 1px solid #bba879;
+            border-radius: 8px;
+            background: linear-gradient(110deg, #fff9edee, #f5ebd7dd 65%, #e3e7d9b3);
+            box-shadow: 0 22px 60px #3c46372b, inset 0 0 0 7px #fff9ed9c;
+            transform-style: preserve-3d
+        }
+
+        .hero:after {
+            content: '';
+            position: absolute;
+            inset: 13px;
+            border: 1px solid #b7955566;
+            pointer-events: none
+        }
+
+        .hero small {
+            font-size: 15px;
+            letter-spacing: 4px;
+            color: var(--cinnabar);
+            font-weight: 800
+        }
+
+        .hero h1 {
+            font-family: 'Noto Serif SC', serif;
+            font-size: clamp(50px, 7vw, 94px);
+            line-height: 1.15;
+            letter-spacing: 5px;
+            margin: 14px 0;
+            color: var(--deep);
+            text-shadow: 2px 4px 0 #c2d0bb, 5px 9px 16px #42594a40;
+            transform: translateZ(35px)
+        }
+
+        .hero h1 span {
+            color: var(--gold)
+        }
+
+        .hero p {
+            font-size: 19px;
+            margin: 0;
+            color: #5c584b;
+            letter-spacing: 1px
+        }
+
+        .hero .ornament {
+            position: absolute;
+            right: 12%;
+            top: 15%;
+            font: 800 160px 'Noto Serif SC', serif;
+            color: #356b6017;
+            transform: rotate(-12deg);
+            user-select: none
+        }
+
+        .toolbar {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            align-items: center;
+            margin: 36px 0 24px;
+            flex-wrap: wrap
+        }
+
+        .toolbar strong {
+            font: 700 25px 'Noto Serif SC', serif;
+            color: var(--deep);
+            letter-spacing: 2px
+        }
+
+        .toolbar strong:before {
+            content: '◆';
+            font-size: 14px;
+            color: var(--gold);
+            margin-right: 12px
+        }
+
+        input {
+            font: inherit;
+            padding: 14px 18px;
+            border: 1px solid #c9b88f;
+            border-radius: 6px;
+            min-width: 250px;
+            background: #fffaf0;
+            color: var(--ink);
+            outline-color: var(--jade)
+        }
+
+        button {
+            font: inherit;
+            cursor: pointer
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 22px;
+            perspective: 1200px
+        }
+
+        .card {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(155deg, #fffdf6, #f6ecd9);
+            border: 1px solid #c8b58e;
+            border-radius: 8px;
+            padding: 25px 23px 23px;
+            box-shadow: 0 7px 0 #c9bb9c, 0 16px 25px #3b4e3b20;
+            transform-style: preserve-3d;
+            transition: transform .32s ease, box-shadow .32s ease
+        }
+
+        .card:before {
+            content: '';
+            position: absolute;
+            inset: 8px;
+            border: 1px solid #b7955540;
+            pointer-events: none
+        }
+
+        .card:after {
+            content: '卷';
+            position: absolute;
+            right: 20px;
+            top: 11px;
+            font: 800 62px 'Noto Serif SC', serif;
+            color: #356b6010;
+            pointer-events: none
+        }
+
+        .card:hover {
+            transform: translateY(-10px) rotateX(3deg) rotateY(-2deg);
+            box-shadow: 0 12px 0 #b7a880, 0 26px 38px #344b3b33
+        }
+
+        .num {
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: var(--cinnabar);
+            font-weight: 800
+        }
+
+        .card h2 {
+            font: 800 34px 'Noto Serif SC', serif;
+            margin: 12px 0 2px;
+            color: var(--deep)
+        }
+
+        .sub {
+            font: 600 17px 'Noto Serif SC', serif;
+            color: #857552;
+            margin-bottom: 22px
+        }
+
+        .ppt,
+        .practice button {
+            width: 100%;
+            border-radius: 5px;
+            padding: 14px 8px;
+            font-weight: 700;
+            transition: background .2s, transform .2s
+        }
+
+        .ppt {
+            background: var(--jade);
+            color: #fffaf0;
+            border: 1px solid var(--deep);
+            font-size: 17px;
+            margin-bottom: 12px;
+            box-shadow: 0 4px 0 #244d45
+        }
+
+        .ppt:hover {
+            background: var(--deep);
+            transform: translateY(-2px)
+        }
+
+        .practice {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px
+        }
+
+        .practice button {
+            background: #f8f0df;
+            color: var(--deep);
+            border: 1px solid #c5b58e;
+            font-size: 14px
+        }
+
+        .practice button:hover {
+            background: #e2e9da;
+            transform: translateY(-2px)
+        }
+
+        .note {
+            text-align: center;
+            color: #6f705e;
+            margin: 38px 0;
+            font-size: 14px
+        }
+
+        .modal {
+            position: fixed;
+            inset: 0;
+            background: #1b302bc4;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            z-index: 10;
+            backdrop-filter: blur(5px)
+        }
+
+        .modal.on {
+            display: flex
+        }
+
+        .dialog {
+            background: var(--ivory);
+            border: 2px solid var(--gold);
+            border-radius: 8px;
+            box-shadow: 0 22px 80px #0005;
+            padding: 34px;
+            max-width: 530px;
+            width: 100%
+        }
+
+        .dialog h2 {
+            margin-top: 0;
+            color: var(--jade);
+            font-family: 'Noto Serif SC', serif
+        }
+
+        .dialog input {
+            width: 100%;
+            margin: 12px 0
+        }
+
+        .actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px
+        }
+
+        .actions button {
+            border: 1px solid #b9aa8a;
+            border-radius: 5px;
+            padding: 12px 18px
+        }
+
+        .save {
+            background: var(--jade);
+            color: white
+        }
+
+        .cancel {
+            background: #f3ead6;
+            color: var(--ink)
+        }
+
+        @media(max-width:1150px) {
+            .grid {
+                grid-template-columns: repeat(3, 1fr)
+            }
+        }
+
+        @media(max-width:780px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .hero {
+                padding: 35px;
+                min-height: 240px
+            }
+
+            .hero .ornament {
+                font-size: 100px
+            }
+        }
+
+        @media(max-width:530px) {
+            .grid {
+                grid-template-columns: 1fr
+            }
+
+            main {
+                padding: 14px
+            }
+
+            .toolbar input {
+                width: 100%
+            }
+
+            .hero {
+                padding: 34px 26px
+            }
+
+            .hero h1 {
+                letter-spacing: 0
+            }
+
+            .seal {
+                display: none
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+
+            *,
+            *:before,
+            *:after {
+                transition: none !important;
+                animation: none !important
+            }
+        }
+
+        .ppt,
+        .practice a {
+            display: block;
+            text-align: center;
+            text-decoration: none
+        }
+
+        .practice a {
+            width: 100%;
+            border-radius: 5px;
+            padding: 14px 8px;
+            font-weight: 700;
+            transition: background .2s, transform .2s;
+            background: #f8f0df;
+            color: var(--deep);
+            border: 1px solid #c5b58e;
+            font-size: 14px
+        }
+
+        .practice a:hover {
+            background: #e2e9da;
+            transform: translateY(-2px)
+        }
+
+        .ppt:focus-visible,
+        .practice a:focus-visible {
+            outline: 3px solid var(--gold);
+            outline-offset: 3px
+        }
+
+        .login-layer {
+            position: fixed;
+            inset: 0;
+            z-index: 100;
+            background: linear-gradient(140deg, #203e36e8, #182c27ed);
+            display: grid;
+            place-items: center;
+            padding: 18px;
+            overflow: auto
+        }
+
+        .login-layer[hidden] {
+            display: none
+        }
+
+        .login-box {
+            background: var(--ivory);
+            border: 2px solid var(--gold);
+            box-shadow: 0 25px 90px #0008;
+            border-radius: 15px;
+            max-width: 510px;
+            width: 100%;
+            padding: clamp(24px, 5vw, 44px);
+            position: relative
+        }
+
+        .login-box:before {
+            content: '卷';
+            position: absolute;
+            right: 25px;
+            top: 9px;
+            color: #b7955530;
+            font: 100px 'Noto Serif SC', serif;
+            pointer-events: none
+        }
+
+        .login-box h2 {
+            font: 700 clamp(29px, 5vw, 39px) 'Noto Serif SC', serif;
+            color: var(--deep);
+            margin: 0 0 8px
+        }
+
+        .login-box p {
+            color: #6c6b5e;
+            line-height: 1.7
+        }
+
+        .login-box label {
+            display: block;
+            margin: 17px 0 5px;
+            font-weight: 700;
+            color: var(--deep)
+        }
+
+        .login-box input {
+            width: 100%;
+            border: 1px solid #c6b996;
+            background: #fffdf6;
+            border-radius: 7px;
+            padding: 14px;
+            font: inherit;
+            color: var(--ink)
+        }
+
+        .login-box button,
+        .userbar button {
+            background: var(--jade);
+            color: white;
+            border: 0;
+            border-radius: 7px;
+            padding: 13px 22px;
+            font: inherit;
+            font-weight: 700;
+            cursor: pointer
+        }
+
+        .login-box button {
+            width: 100%;
+            margin-top: 20px
+        }
+
+        .login-box button:disabled {
+            opacity: .6;
+            cursor: wait
+        }
+
+        .login-error {
+            min-height: 1.4em;
+            color: #9d413a;
+            font-size: 14px
+        }
+
+        .userbar {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 14px;
+            margin: 12px 0;
+            color: var(--deep);
+            flex-wrap: wrap
+        }
+
+        .userbar button {
+            padding: 8px 14px
+        }
+
+        .login-note {
+            font-size: 13px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-layer" id="loginLayer">
+        <form class="login-box" id="loginForm">
+            <h2>入学登记 · Vào lớp học</h2>
+            <p>HSK 4 · 2.0 — Điền thông tin để bắt đầu học.</p><label for="studentName">Họ và tên học sinh</label><input
+                id="studentName" required maxlength="100" autocomplete="name" placeholder="Nguyễn Văn A"><label
+                for="studentClass">Lớp</label><input id="studentClass" required maxlength="60"
+                placeholder="HSK4 - Lớp 1"><label for="studentEmail">Email (không bắt buộc)</label><input
+                id="studentEmail" type="email" maxlength="160" autocomplete="email"
+                placeholder="hocvien@example.com"><button id="loginButton" type="submit">进入课堂 · Vào học</button>
+            <p class="login-error" id="loginError" role="status"></p>
+            <p class="login-note">Không yêu cầu mật khẩu. Đây là biểu mẫu ghi danh, không phải hệ thống xác thực tài
+                khoản. Chỉ gửi thông báo nếu giáo viên đã cấu hình dịch vụ email.</p>
+        </form>
+    </div>
+    <main>
+        <div class="userbar" id="userbar" hidden><span id="welcome"></span><button id="logout" type="button">Đổi học
+                sinh</button></div>
+        <header class="hero">
+            <div class="scene">
+                <div class="sun"></div>
+                <div class="mountain"></div>
+                <div class="mountain two"></div>
+                <div class="seal">学而时习之</div>
+            </div>
+            <div class="ornament">書</div><small>中文学习 · HSK 4 STANDARD COURSE</small>
+            <h1>HSK 4 <span>2.0</span></h1>
+            <p>二十课 · Bài giảng PPT · Bốn phần luyện tập</p>
+        </header>
+        <div class="toolbar"><strong>课程目录 · 20 bài học</strong><input id="search" placeholder="Tìm bài học..."
+                aria-label="Tìm bài học"></div>
+        <section id="grid" class="grid"></section>
+        <p class="note">Chọn PPT hoặc Luyện tập 1–4 để chuyển đến trang HTML tương ứng. Hãy tải các file bài học lên
+            GitHub Pages theo đúng thư mục.</p>
+    </main>
+    <script>
+        // Cấu hình: tạo form tại https://formspree.io/ và đặt email nhận thông báo là dungtran92qc@gmail.com.
+        // Sau khi xác minh email, thay chuỗi bên dưới bằng endpoint của form, ví dụ https://formspree.io/f/xxxxxxxx.
+        const NOTIFY_ENDPOINT = '';
+        const loginLayer = document.getElementById('loginLayer');
+        const userbar = document.getElementById('userbar');
+        function showUser(data) {loginLayer.hidden = true; userbar.hidden = false; document.getElementById('welcome').textContent = '欢迎，' + data.name + ' · ' + data.className;}
+        const previous = sessionStorage.getItem('hsk4_student'); if (previous) {try {showUser(JSON.parse(previous))} catch (e) {sessionStorage.removeItem('hsk4_student')} }
+        document.getElementById('logout').addEventListener('click', () => {sessionStorage.removeItem('hsk4_student'); userbar.hidden = true; loginLayer.hidden = false;});
+        document.getElementById('loginForm').addEventListener('submit', async e => {
+            e.preventDefault(); const btn = document.getElementById('loginButton'), status = document.getElementById('loginError');
+            const data = {name: document.getElementById('studentName').value.trim(), className: document.getElementById('studentClass').value.trim(), email: document.getElementById('studentEmail').value.trim()};
+            if (!data.name || !data.className) return;
+            btn.disabled = true; status.textContent = '';
+            if (NOTIFY_ENDPOINT) {try {const response = await fetch(NOTIFY_ENDPOINT, {method: 'POST', headers: {'Content-Type': 'application/json', 'Accept': 'application/json'}, body: JSON.stringify({name: data.name, class: data.className, email: data.email || 'Không cung cấp', time: new Date().toLocaleString('vi-VN'), _subject: 'HSK4 2.0 - Học sinh vào lớp'})}); if (!response.ok) throw Error('Gửi thông báo chưa thành công');} catch (err) {status.textContent = 'Chưa gửi được email thông báo. Vui lòng thử lại hoặc báo giáo viên.'; btn.disabled = false; return;} }
+            else {status.textContent = 'Chưa cấu hình email: chế độ xem thử, không gửi thông báo.';}
+            sessionStorage.setItem('hsk4_student', JSON.stringify(data));
+            if (!NOTIFY_ENDPOINT) {setTimeout(() => showUser(data), 900)} else showUser(data);
+            btn.disabled = false;
+        });
+        const names = ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二', '十三', '十四', '十五', '十六', '十七', '十八', '十九', '二十'];
+        const grid = document.getElementById('grid');
+        function lessonPath(n, t) {
+            if (n === 12 && t === 'ppt') {
+                return 'Bai-12/PPT/index.html';
+            }
+
+            const folder = 'bai-' + String(n).padStart(2, '0');
+            return folder + '/' + (t === 'ppt'
+                ? 'ppt.html'
+                : 'luyen-tap-' + t + '.html');
+        }
+        function render() {grid.innerHTML = ''; const q = document.getElementById('search').value.trim().toLowerCase(); for (let n = 1; n <= 20; n++) {if (q && !('bài ' + n + ' lesson ' + n + ' 第' + names[n - 1] + '课').includes(q)) continue; const c = document.createElement('article'); c.className = 'card'; c.innerHTML = `<div class="num">LESSON ${String(n).padStart(2, '0')}</div><h2>Bài ${n}</h2><div class="sub">第${names[n - 1]}课</div><a class="ppt" href="${lessonPath(n, 'ppt')}">Bài giảng PPT</a><div class="practice">${[1, 2, 3, 4].map(i => `<a href="${lessonPath(n, i)}">Luyện tập ${i}</a>`).join('')}</div>`; grid.appendChild(c)} }
+        document.getElementById('search').oninput = render; render();
+        const hero = document.querySelector('.hero'); if (window.matchMedia('(pointer:fine) and (prefers-reduced-motion:no-preference)').matches) {hero.addEventListener('pointermove', e => {let r = hero.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5; hero.style.transform = `rotateY(${x * 3}deg) rotateX(${-y * 2}deg)`}); hero.addEventListener('pointerleave', () => hero.style.transform = '');}
+    </script>
+</body>
+
+</html>
